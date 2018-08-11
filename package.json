@@ -1,0 +1,14 @@
+{
+  "name": "webworker-mailbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lester Sy <lestersy@hotmail.com> (https://lestersy.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
