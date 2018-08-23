@@ -62,7 +62,9 @@ function logic(body: Function, mailboxes?: WorkerMailboxes) {
         let { type, ...payload } = e.data as HostMessage<any>;
         switch (type) {
             case MAIN_REQUEST: {
-                Promise.resolve(body(payload.value)).then(value => {
+                Promise.resolve().then(() => {
+                    return body(payload.value);
+                }).then(value => {
                     postMessage({ type: MAIN_REQUEST, value });
                 }).catch(error => {
                     postMessage({ type: MAIN_REQUEST, error: error.stack });

@@ -5,24 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script>
-        // for use with module: none
-        var exports = {};
+        var require = {
+            urlArgs: new Date().getTime().toString()
+        };
     </script>
-    <script src="js/mailbox-host.js"></script>
-    <title>Document</title>
+    <script src="lib/require.js" data-main="main.js"></script>
+    <title>Mailbox Webworker</title>
 </head>
 <body>
     <button id="execute">Execute</button>    
-    <script>
-        var btnExecute = document.querySelector('#execute');
-        var host = Mailbox('js/worker.js');
-        btnExecute.addEventListener('click', () => {
-            host.send('return Object.keys(this).length', 5000).then(result => {
-                console.log(result);
-            }).catch(error => {
-                console.error(error);
-            });
-        });        
-    </script>
 </body>
 </html>

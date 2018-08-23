@@ -9,6 +9,8 @@
   "author": "Lester Sy <lestersy@hotmail.com> (https://lestersy.io)",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "requirejs": "^2.3.5",
     "typescript": "^3.0.1"
   }
 }
