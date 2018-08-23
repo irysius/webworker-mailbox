@@ -1,3 +1,14 @@
+# Demo
+To build:
+
+    $ npm install
+    $ node-tsc.cmd -b worker
+    $ node-tsc.cmd -b browser
+
+Mess around with the demo by hosting the folder as a site (using something like `http-server`).
+
+By default, pressing execute will cause an error.
+
 # Host
     // 1. Import the host side of the solution.
 
